@@ -57,6 +57,7 @@
         data: function() {
             return {
                 navItems: [
+                    {name: 'Home', link: '/', icon: 'home'},
                     {name: 'Full List', link: '/completed', icon: 'format-list-bulleted-square'},
                     {name: 'Top 10', link: '/top', icon: 'trophy'},
                     {name: 'Maxwell Mysteries', link: '/maxwellMysteries', icon: 'puzzle'},
