@@ -1,33 +1,25 @@
 <template>
     <v-container>
         <transition name="fade" appear>
-            <h1 class="display-4 py-15 pl-15">
-                {{ greeting }}
-                <transition name="fade">
-                    <span class="ml-n6" v-if="count >= 1" key="1">.</span>
-                </transition>
-                <transition name="fade">
-                    <span v-if="count >= 2">.</span>
-                </transition>
-                <transition name="fade">
-                    <span v-if="count >= 3">.</span>
-                </transition>
-            </h1>
+            <v-row>
+                <v-col cols="6">
+                    <h1
+                        class="display-4 py-15 pl-15 welcome"
+                        @mouseover.once="$store.dispatch('startDecrypt')"
+                    >
+                        {{ getDecryptText }}
+                    </h1>
+                </v-col>
+            </v-row>
         </transition>
 
-        <photo-gallery :images="images"/>
+        <photo-gallery :images="$store.state.images.images" />
     </v-container>
 </template>
 
 <script>
     import PhotoGallery from '../components/PhotoGallery.vue'
-    import BankHeistImg from '../assets/images/Bank_Heist.jpg'
-    import BlownAwayImg from '../assets/images/Blown_Away.jpg'
-    import DodgeImg from '../assets/images/Dodge.jpg'
-    import JailBudapestImg from '../assets/images/Jail_Break_Budapest.jpg'
-    import JailOrlandoImg from '../assets/images/Jail_Break_Orlando.jpg'
-    import PiratesImg from '../assets/images/Pirates_Of_Polaris.jpg'
-
+    import { mapGetters } from 'vuex'
 
     export default {
         name: 'HomeView',
@@ -37,42 +29,18 @@
         },
 
         mounted() {
-            setTimeout(() => (this.count += 1), 1500)
-            setTimeout(() => (this.count += 1), 2500)
-            setTimeout(() => (this.count += 1), 3500)
+            this.$store.dispatch('useTextDecrypt', this.greeting)
         },
 
         data: function () {
             return {
-                greeting: 'Hello',
-                count: 0,
-                images: [
-                    {
-                        src: BankHeistImg,
-                        alt: ''
-                    },
-                    {
-                        src:BlownAwayImg,
-                        alt: ''
-                    },
-                    {
-                        src: DodgeImg,
-                        alt: ''
-                    },
-                    {
-                        src: JailBudapestImg,
-                        alt: ''
-                    },
-                    {
-                        src: JailOrlandoImg,
-                        alt: ''
-                    },
-                    {
-                        src: PiratesImg,
-                        alt: ''
-                    },
-                ]
+                greeting: 'Hello...',
+                dotCount: 0
             }
+        },
+
+        computed: {
+            ...mapGetters(['getDecryptText'])
         }
     }
 </script>
@@ -85,5 +53,9 @@
     .fade-enter,
     .fade-leave-to {
         opacity: 0;
+    }
+
+    .welcome {
+        cursor: pointer;
     }
 </style>
