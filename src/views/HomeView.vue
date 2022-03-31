@@ -15,12 +15,19 @@
             </h1>
         </transition>
 
-        <photo-gallery />
+        <photo-gallery :images="images"/>
     </v-container>
 </template>
 
 <script>
     import PhotoGallery from '../components/PhotoGallery.vue'
+    import BankHeistImg from '../assets/images/Bank_Heist.jpg'
+    import BlownAwayImg from '../assets/images/Blown_Away.jpg'
+    import DodgeImg from '../assets/images/Dodge.jpg'
+    import JailBudapestImg from '../assets/images/Jail_Break_Budapest.jpg'
+    import JailOrlandoImg from '../assets/images/Jail_Break_Orlando.jpg'
+    import PiratesImg from '../assets/images/Pirates_Of_Polaris.jpg'
+
 
     export default {
         name: 'HomeView',
@@ -38,7 +45,33 @@
         data: function () {
             return {
                 greeting: 'Hello',
-                count: 0
+                count: 0,
+                images: [
+                    {
+                        src: BankHeistImg,
+                        alt: ''
+                    },
+                    {
+                        src:BlownAwayImg,
+                        alt: ''
+                    },
+                    {
+                        src: DodgeImg,
+                        alt: ''
+                    },
+                    {
+                        src: JailBudapestImg,
+                        alt: ''
+                    },
+                    {
+                        src: JailOrlandoImg,
+                        alt: ''
+                    },
+                    {
+                        src: PiratesImg,
+                        alt: ''
+                    },
+                ]
             }
         }
     }
