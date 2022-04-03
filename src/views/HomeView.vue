@@ -1,46 +1,55 @@
 <template>
-    <v-container>
-        <transition name="fade" appear>
-            <v-row>
-                <v-col cols="6">
-                    <h1
-                        class="display-4 py-15 pl-15 welcome"
-                        @mouseover.once="$store.dispatch('startDecrypt')"
-                    >
-                        {{ getDecryptText }}
-                    </h1>
-                </v-col>
-            </v-row>
-        </transition>
+    <div>
+        <v-container>
+            <transition-group name="fade" appear>
+                <v-row class="pt-15 pb-10" key="home0">
+                    <v-col cols="7">
+                        <text-decrypt
+                            addedClasses="display-4"
+                            :inputText="greeting"
+                        />
+                    </v-col>
+                    <v-spacer />
+                </v-row>
 
-        <photo-gallery :images="$store.state.images.images" />
-    </v-container>
+                <photo-gallery
+                    :images="$store.state.images.images"
+                    key="home1"
+                />
+            </transition-group>
+        </v-container>
+
+        <v-footer>
+            <v-row key="home2">
+                <v-spacer />
+                <v-col cols="2">
+                    <text-decrypt
+                        addedClasses="secretMessage"
+                        inputText="flip the photos"
+                    />
+                </v-col>
+                <v-spacer />
+            </v-row>
+        </v-footer>
+    </div>
 </template>
 
 <script>
     import PhotoGallery from '../components/PhotoGallery.vue'
-    import { mapGetters } from 'vuex'
+    import TextDecrypt from '../components/TextDecrypt.vue'
 
     export default {
         name: 'HomeView',
 
         components: {
-            PhotoGallery
-        },
-
-        mounted() {
-            this.$store.dispatch('useTextDecrypt', this.greeting)
+            PhotoGallery,
+            TextDecrypt
         },
 
         data: function () {
             return {
-                greeting: 'Hello...',
-                dotCount: 0
+                greeting: 'Hello...'
             }
-        },
-
-        computed: {
-            ...mapGetters(['getDecryptText'])
         }
     }
 </script>
@@ -53,9 +62,5 @@
     .fade-enter,
     .fade-leave-to {
         opacity: 0;
-    }
-
-    .welcome {
-        cursor: pointer;
     }
 </style>
