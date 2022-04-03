@@ -58,7 +58,10 @@
             return {
                 navItems: [
                     {name: 'Home', link: '/', icon: 'home'},
-                    {name: 'Full List', link: '/completed', icon: 'format-list-bulleted-square'},
+                    {name: 'Full List', link: '/completed', icon: 'format-list-bulleted-square', subMenu: [
+                        {name: 'Squeak', link: '/completed/squeak', icon: 'rodent'},
+                        {name: 'Bubbles', link: '/completed/bubbles', icon: 'chart-bubble'}
+                    ]},
                     {name: 'Top 10', link: '/top', icon: 'trophy'},
                     {name: 'Maxwell Mysteries', link: '/maxwellMysteries', icon: 'puzzle'},
                 ],
