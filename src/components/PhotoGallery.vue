@@ -16,7 +16,7 @@
 
         <v-row
             v-for="(row, rowIndex) in imagesPerRow(2)"
-            :key="'row' + rowIndex"
+            :key="'rowSm' + rowIndex"
             class="hidden-md-and-up"
         >
             <v-col
