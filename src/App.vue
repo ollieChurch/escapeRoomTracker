@@ -11,11 +11,20 @@
 <script>
 import NavBar from './components/NavBar.vue'
 
+import tagIcons from './mixins/tagIcons'
+
+
 export default {
   name: 'App',
 
   components: {
       NavBar
+  },
+
+  mixins: function() {
+      return [
+          tagIcons
+      ]
   },
 
   data: () => ({
@@ -27,5 +36,9 @@ export default {
 <style>
     * {
         box-sizing: border-box;
+    }
+
+    .v-card__text, .v-card__title {
+        word-break: normal !important; 
     }
 </style>

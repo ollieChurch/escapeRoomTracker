@@ -5,7 +5,7 @@
                 <v-row class="pt-15 pb-10" key="home0">
                     <v-col cols="7">
                         <text-decrypt
-                            addedClasses="display-4"
+                            addedClasses="text-h1"
                             :inputText="greeting"
                         />
                     </v-col>
