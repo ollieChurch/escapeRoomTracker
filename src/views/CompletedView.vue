@@ -2,7 +2,7 @@
     <v-container>
         <v-container>
             <v-row class="row-container mt-6">
-                <v-col cols="8" class="row-container">
+                <v-col cols="8">
                     <h2 class="text-h2">Completed Games</h2>
                 </v-col>
                 <v-spacer />
@@ -11,8 +11,7 @@
                         :total="getTotalNumber"
                         animate
                         label="games played"
-                        numAddedClasses="text-h2 mb-n1 pb-0 text-center"
-                        labelAddedClasses="pt-0 mt-0"
+                        numAddedClasses="text-h2"
                     />
                 </v-col>
             </v-row>
@@ -27,16 +26,17 @@
                     prepend-inner-icon="mdi-magnify"
                     label="Search"
                     class="search-bar"
-                    v-model="searchFilter"
+                    v-model="filterText"
+                    @keyup="filterList()"
                 />
             </v-col>
 
             <v-col cols="auto" lg="6" class="d-flex align-center justify-end">
                 <p class="pb-0 mb-0 mr-5">Filter By:</p>
-                <v-btn-toggle icon rounded v-model="tagFilter" >
+                <v-btn-toggle icon rounded v-model="filterTag">
                     <v-tooltip top v-for="tag in getTags" :key="tag + 'btn'">
                         <template v-slot:activator="{ on, attrs }">
-                            <v-btn :value="tag" v-bind="attrs" v-on="on" >
+                            <v-btn :value="tag" v-bind="attrs" v-on="on">
                                 <v-icon>mdi-{{ findIcon(tag) }}</v-icon>
                             </v-btn>
                         </template>
@@ -45,7 +45,7 @@
 
                     <v-tooltip top>
                         <template v-slot:activator="{ on, attrs }">
-                            <v-btn value="topTen" v-bind="attrs" v-on="on" >
+                            <v-btn value="topTen" v-bind="attrs" v-on="on">
                                 <v-icon>mdi-trophy</v-icon>
                             </v-btn>
                         </template>
@@ -82,32 +82,35 @@
         },
 
         mounted() {
-            this.$store.dispatch('filterList', {searchBar: this.searchFilter, tag: this.tagFilter })
+            this.filterList()
         },
 
         data: function () {
             return {
-                tagFilter: '',
-                searchFilter: ''
+                filterTag: '',
+                filterText: ''
             }
         },
 
         computed: {
             ...mapGetters(['getFilteredList', 'getTotalNumber', 'getTags']),
+
+            filterBy: function () {
+                return {
+                    tag: this.filterTag,
+                    text: this.filterText
+                }
+            }
         },
 
         methods: {
-            filterList: function() {
-                this.$store.dispatch('filterList', { searchBar: this.searchFilter, tag: this.tagFilter })
+            filterList: function () {
+                this.$store.dispatch('filterList', this.filterBy)
             }
         },
 
         watch: {
-            tagFilter: function () {
-                this.filterList()
-            },
-
-            searchFilter: function () {
+            filterTag: function () {
                 this.filterList()
             }
         }

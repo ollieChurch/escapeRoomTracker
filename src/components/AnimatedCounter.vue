@@ -1,7 +1,9 @@
 <template>
     <div>
-        <p :class="numAddedClasses">{{ counter }}</p>
-        <p :class="labelAddedClasses">{{ label }}</p>
+        <p class="mb-n1 pb-0 text-center" :class="numAddedClasses">
+            {{ counter }}
+        </p>
+        <p class="pt-0 mt-0" :class="labelAddedClasses">{{ label }}</p>
     </div>
 </template>
 
