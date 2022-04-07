@@ -22,8 +22,19 @@ export default {
                 city: 'Guildford',
                 country: 'UK',
                 gamesPlayed: [
-                    { name: 'The Case Of The Missing Gun', topTen: 4 },
-                    { name: 'Venus', topTen: 9, tags: ['testing', 'unique'] },
+                    {
+                        name: 'The Case Of The Missing Gun',
+                        topTen: 4,
+                        description:
+                            'My third escape room, great set and story driven. Puzzle structure played to my strengths and loved the secret surprises. Mad and energetic excitement and fun throughout with excellent hosting.'
+                    },
+                    {
+                        name: 'Venus',
+                        topTen: 9,
+                        tags: ['testing', 'unique'],
+                        description:
+                            'Even as the first team to test this room the potential behind it was huge. Puzzles which go deeper and require more careful thought than most. But the standout is Venus herself, a fully interactive and hilarious A.I. I could have spent the whole time just chatting to her.'
+                    },
                     { name: 'The Recording Studio', tags: ['testing'] }
                 ]
             },
@@ -62,7 +73,9 @@ export default {
                     {
                         name: 'The Bank Robbery (new)',
                         topTen: 10,
-                        tags: ['testing']
+                        tags: ['testing'],
+                        description:
+                            'Bursting out of the back of a van into a convincingly modern day bank, cracking a giant classic looking vault door as well as ripping an ATM open by chaining it to the van. This room was a lot of fun in so many places.'
                     }
                 ]
             },
@@ -81,7 +94,12 @@ export default {
                 city: 'Reading',
                 country: 'UK',
                 gamesPlayed: [
-                    { name: 'Rebellion', topTen: 8 },
+                    {
+                        name: 'Rebellion',
+                        topTen: 8,
+                        description:
+                            'Creating a castle inside some fairly standard modern day rooms is no easy task. I loved all of the physical analogue mechanics that made this room work and the non-linear puzzles which ended up linking together in an extremely satisfying ending.'
+                    },
                     { name: 'Imaginarium' },
                     { name: 'The Divide', tags: ['pop-up'] },
                     { name: 'Station X', tags: ['versus'] },
@@ -172,7 +190,9 @@ export default {
                     {
                         name: 'Special Ops: Mysterious Market',
                         topTen: 3,
-                        tags: ['immersive']
+                        tags: ['immersive'],
+                        description:
+                            'This was a beautifully decorated room with high tech puzzles, immersive atmosphere, and several twist endings. We had a couple of tech malfunctions but still hugely impressive and co-operative puzzling. This really demonstrated what a big budget has the potential to create.'
                     },
                     { name: 'Prison Break', tags: ['immersive'] }
                 ]
@@ -197,7 +217,13 @@ export default {
                 city: 'Budapest',
                 country: 'Hungary',
                 gamesPlayed: [
-                    { name: 'Pirate Bay', topTen: 5, tags: ['immersive'] },
+                    {
+                        name: 'Pirate Bay',
+                        topTen: 5,
+                        tags: ['immersive'],
+                        description:
+                            'This has to be the most impressive set I have ever walked into. Looking up at a full size pirate ship while stood on the dock, climbing up onto the deck, down into the ship, up on top of the ship. An experience not rivalled by any other room.'
+                    },
                     { name: 'The Tower Of Wollongong', tags: ['versus'] },
                     { name: 'Time Machine' },
                     { name: 'The Iron Throne' },
@@ -230,7 +256,9 @@ export default {
                     {
                         name: 'Secret Subway',
                         topTen: 1,
-                        tags: ['immersive', 'unique']
+                        tags: ['immersive', 'unique'],
+                        description:
+                            'This room was FULL of exciting surprises and a great flow, everything made sense and there was a palpable excitement from everyone on the team. Brilliant concept of having to take our power generator with us between rooms as well.'
                     },
                     { name: '1984' },
                     { name: 'Heaven and Hell' },
@@ -252,7 +280,13 @@ export default {
                 country: 'UK',
                 gamesPlayed: [
                     { name: 'Jail Break' },
-                    { name: 'Diamond Dogs', topTen: 6, tags: ['immersive'] },
+                    {
+                        name: 'Diamond Dogs',
+                        topTen: 6,
+                        tags: ['immersive'],
+                        description:
+                            "Fun and frantic! This game had a bit of everything and the overriding feeling to it all was fun. It had a great story which didn't take itself too seriously and the puzzles were just the right to keep me thinking without disrupting the flow. Finished the game with a big smile. Job done. [Also my 100th game!]"
+                    },
                     { name: 'Temple Quest', tags: ['immersive'] }
                 ]
             },
@@ -289,7 +323,9 @@ export default {
                     {
                         name: 'Galactic Pioneers',
                         topTen: 2,
-                        tags: ['immersive']
+                        tags: ['immersive'],
+                        description:
+                            'This was a whole lot of fun. Puzzles required some thinking and working out but nothing extensively difficult and we managed to smash it without worrying too much about time. The whole experience was extremely story led and immersive in design and finished with a Space Team-esque puzzle that was fun and frantic. Good, characterful clue system as well.'
                     }
                 ]
             },
@@ -382,7 +418,9 @@ export default {
                     {
                         name: 'Into The Reliquary',
                         topTen: 7,
-                        tags: ['immersive', 'unique']
+                        tags: ['immersive', 'unique'],
+                        description:
+                            "Highly immersive set design which required entering a tomb, exploring the depths by rope ladder and even navigating a river cave by inflatable boat! But what truly earns this room a place on the top 10 is it's totally unique 'moving sands' effect which made me question reality for more than a second."
                     },
                     { name: 'One Wing Airlines', tags: ['immersive', 'unique'] }
                 ]
@@ -425,9 +463,28 @@ export default {
             return state.full.sort((a, b) => (a.venue > b.venue ? 1 : -1))
         },
 
-        getFilteredList: function(state) {
-            const venues = state.filtered.sort((a, b) => (a.venue > b.venue ? 1 : -1))
+        getFilteredList: function (state) {
+            const venues = state.filtered.sort((a, b) =>
+                a.venue > b.venue ? 1 : -1
+            )
             return venues
+        },
+
+        getTopTen: function (state) {
+            const result = []
+            state.full.forEach(venue => {
+                venue.gamesPlayed.forEach(game => {
+                    game.topTen &&
+                        result.push({
+                            venue,
+                            game
+                        })
+                })
+            })
+
+            return result.sort((a, b) =>
+                a.game.topTen > b.game.topTen ? 1 : -1
+            )
         },
 
         getTotalNumber: function (state) {
@@ -458,17 +515,16 @@ export default {
     },
 
     mutations: {
-        setFiltered: function(state, update) {
+        setFiltered: function (state, update) {
             state.filtered = update
         }
     },
 
     actions: {
-        filterList: function ({commit, getters}, filter) {
-            const { searchBar, tag } = filter
+        filterList: function ({ commit, getters }, { tag, text }) {
             const fullList = getters.getFullList
 
-            if (!searchBar && !tag) {
+            if (!text && !tag) {
                 return commit('setFiltered', fullList)
             }
 
@@ -479,9 +535,13 @@ export default {
                     let bool = false
                     venue.gamesPlayed.forEach(game => {
                         if (tag === 'topTen') {
-                            if (game.topTen) { return bool = true }
+                            if (game.topTen) {
+                                return (bool = true)
+                            }
                         } else {
-                            if (game.tags && game.tags.includes(tag)) { return bool = true }
+                            if (game.tags && game.tags.includes(tag)) {
+                                return (bool = true)
+                            }
                         }
                     })
                     return bool
@@ -490,9 +550,9 @@ export default {
                 result = fullList
             }
 
-            if (searchBar) {
+            if (text) {
                 result = result.filter(item => {
-                    const input = searchBar.toLowerCase()
+                    const input = text.toLowerCase()
                     const { venue, city, country, gamesPlayed } = item
                     let roomMatch = false
                     gamesPlayed.forEach(game => {
@@ -509,6 +569,8 @@ export default {
             }
 
             commit('setFiltered', result)
-        }
+        },
+
+        checkTag: function () {}
     }
 }
