@@ -41,4 +41,8 @@ export default {
     .v-card__text, .v-card__title {
         word-break: normal !important; 
     }
+
+    .debug {
+        outline: 2px solid red;
+    }
 </style>

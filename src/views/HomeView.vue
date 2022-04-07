@@ -19,7 +19,7 @@
             </transition-group>
         </v-container>
 
-        <v-footer>
+        <!-- <v-footer>
             <v-row key="home2">
                 <v-spacer />
                 <v-col cols="2">
@@ -30,7 +30,7 @@
                 </v-col>
                 <v-spacer />
             </v-row>
-        </v-footer>
+        </v-footer> -->
     </div>
 </template>
 
