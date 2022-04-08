@@ -18,19 +18,6 @@
                 />
             </transition-group>
         </v-container>
-
-        <!-- <v-footer>
-            <v-row key="home2">
-                <v-spacer />
-                <v-col cols="2">
-                    <text-decrypt
-                        addedClasses="secretMessage"
-                        inputText="flip the photos"
-                    />
-                </v-col>
-                <v-spacer />
-            </v-row>
-        </v-footer> -->
     </div>
 </template>
 
