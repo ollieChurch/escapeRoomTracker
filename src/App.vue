@@ -42,6 +42,10 @@ export default {
         word-break: normal !important; 
     }
 
+    .purple-border {
+        border: 8px solid purple !important;
+    }
+
     .debug {
         outline: 2px solid red;
     }

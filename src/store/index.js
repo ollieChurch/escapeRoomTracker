@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 import images from './modules/images'
 import escapeList from './modules/escapeList'
+import products from './modules/products'
 
 Vue.use(Vuex)
 
@@ -16,6 +17,6 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
-      images, escapeList
+      images, escapeList, products
   }
 })

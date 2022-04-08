@@ -1,5 +1,5 @@
 <template>
-    <v-card elevation="7" class="rounded-xl">
+    <v-card elevation="7" class="rounded-xl purple-border">
         <v-card-title class="text-h5 font-weight-bold">{{ venue.venue }}</v-card-title>
         <v-card-subtitle class='text-subtitle-1'>{{
             `${venue.city}, ${venue.country}`
@@ -100,7 +100,6 @@
 
     .v-card {
         height: 100%;
-        border: purple 8px solid;
     }
 
     .v-list-item {

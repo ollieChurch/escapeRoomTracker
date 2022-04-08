@@ -1,5 +1,5 @@
 <template>
-    <v-card class="rounded-xl" elevation="8">
+    <v-card class="rounded-xl purple-border" elevation="8">
         <v-container class="d-flex my-n4 py-n4">
             <div>
                 <v-card-title>{{ entry.game.name }}</v-card-title>
@@ -38,9 +38,3 @@
         }
     }
 </script>
-
-<style scoped>
-    .v-card {
-        border: purple 8px solid;
-    }
-</style>
