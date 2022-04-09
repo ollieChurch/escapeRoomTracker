@@ -14,22 +14,22 @@
                 Products
             </h3>
             <v-row>
-                <v-col cols="4" v-for="product in $store.state.products.full" :key="product.name + product.id">
+                <v-col cols="12" sm="6" lg="4" v-for="product in $store.state.products.full" :key="product.name + product.id">
                     <v-hover>
                         <template v-slot:default="{ hover }">
                             <v-card
                                 elevation="7"
-                                class="rounded-xl purple-border"
+                                class="rounded-xl py-2 purple-border product-card"
                             >
-                                <v-card-title class="px-5 pt-5">
+                                <v-card-title class="px-5">
                                     {{ product.name }}
                                     </v-card-title>
                                 <v-card-subtitle class="px-5">
                                     {{ product.category }}
                                     </v-card-subtitle>
                                 <v-img
-                                    :src="product.image"
-                                    alt=""
+                                    :src="product.image.src"
+                                    :alt="product.image.alt"
                                 />
 
                                 <div>
@@ -39,23 +39,23 @@
                                             absolute
                                             color="#036358"
                                         >
-                                            <v-btn color="purple">
+                                            <v-btn color="purple" link :to="`/maxwellmysteries/product/${product.id}`">
                                                 See more info
                                                 </v-btn>
                                         </v-overlay>
                                     </v-fade-transition>
                                 </div>
 
-                                <v-card-text class="px-5 pb-0 text-body-1">
+                                <v-card-text class="px-5 text-body-1">
                                    {{ product.text }}
                                 </v-card-text>
-                                <v-card-actions class="px-5 flex-column" v-if="product.review">
+                                <v-card-actions class="flex-column pt-0" v-if="product.review">
                                     <v-rating
                                         full-icon="mdi-star"
                                         length="5"
                                         readonly
                                         :value="product.review.rating"
-                                        size="38"
+                                        size="25"
                                         color="orange"
                                     />
                                     <p class="text-subtitle">{{ product.review.reviewer }}</p>
@@ -81,5 +81,9 @@
     .products-title {
         background-color: white;
         width: fit-content;
+    }
+
+    .product-card {
+        height: 100%;
     }
 </style>

@@ -4,7 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import CompletedView from '../views/CompletedView.vue'
 import TopView from '../views/TopView.vue'
 import ShopView from '../views/ShopView.vue'
-
+import ProductView from '../views/ProductView.vue'
 
 Vue.use(VueRouter)
 
@@ -28,11 +28,21 @@ const routes = [
         path: '/maxwellMysteries',
         name: 'maxwellMysteries',
         component: ShopView
+    },
+    {
+        path: '/maxwellMysteries/product/:id',
+        name: 'product',
+        component: ProductView
     }
 ]
 
 const router = new VueRouter({
-    routes
+    routes,
+
+    scrollBehavior() {
+        // always scroll to top
+        return { top: 0 }
+    }
 })
 
 export default router
