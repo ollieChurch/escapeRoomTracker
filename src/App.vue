@@ -11,12 +11,12 @@
 </template>
 
 <script>
-    import NavBar from './components/NavBar.vue'
+import NavBar from './components/NavBar.vue'
+import tagIcons from './mixins/tagIcons'
 
-    import tagIcons from './mixins/tagIcons'
+export default {
+  name: 'App',
 
-    export default {
-        name: 'App',
 
         components: {
             NavBar

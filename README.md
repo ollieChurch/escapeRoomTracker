@@ -1,4 +1,4 @@
-# escape-room-tracker
+# Squeak Escapes - Escape Room Tracker
 
 ## Project setup
 ```
