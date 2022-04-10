@@ -7,6 +7,11 @@
                 <router-view />
             </v-fade-transition>
         </v-main>
+
+        <v-footer dark class="flex-column mt-6">
+            <p class="text-body-2 pt-4 pb-0 mb-0">Made by Ollie</p>
+            <p class="text-body-2 pt-0 mt-0">Copyright {{ new Date().getFullYear() }}</p>
+        </v-footer>
     </v-app>
 </template>
 
