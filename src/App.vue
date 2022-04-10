@@ -1,32 +1,52 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+  <v-app>
+    <nav-bar />
+
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
+<script>
+import NavBar from './components/NavBar.vue'
+
+import tagIcons from './mixins/tagIcons'
+
+
+export default {
+  name: 'App',
+
+  components: {
+      NavBar
+  },
+
+  mixins: function() {
+      return [
+          tagIcons
+      ]
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+    * {
+        box-sizing: border-box;
+    }
 
-nav {
-  padding: 30px;
-}
+    .v-card__text, .v-card__title {
+        word-break: normal !important; 
+    }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+    .purple-border {
+        border: 8px solid purple !important;
+    }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+    .debug {
+        outline: 2px solid red;
+    }
 </style>

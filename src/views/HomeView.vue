@@ -1,18 +1,53 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+        <v-container>
+            <transition-group name="fade" appear>
+                <v-row class="pt-15 pb-10" key="home0">
+                    <v-col cols="7">
+                        <text-decrypt
+                            addedClasses="text-h1"
+                            :inputText="greeting"
+                        />
+                    </v-col>
+                    <v-spacer />
+                </v-row>
+
+                <photo-gallery
+                    :images="$store.state.images.images"
+                    key="home1"
+                />
+            </transition-group>
+        </v-container>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+    import PhotoGallery from '../components/PhotoGallery.vue'
+    import TextDecrypt from '../components/TextDecrypt.vue'
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+        name: 'HomeView',
+
+        components: {
+            PhotoGallery,
+            TextDecrypt
+        },
+
+        data: function () {
+            return {
+                greeting: 'Hello...'
+            }
+        }
+    }
 </script>
+
+<style scoped>
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity 4s;
+    }
+    .fade-enter,
+    .fade-leave-to {
+        opacity: 0;
+    }
+</style>
