@@ -9,6 +9,7 @@ import SantaMImg from '../../assets/images/teams/Santa_Muerte.jpg'
 import SecretSubImg from '../../assets/images/teams/Secret_Subway.jpg'
 import PitImg from '../../assets/images/teams/The_Pit.jpg'
 import TimeMachine from '../../assets/images/teams/Time_Machine.jpg'
+import unhappilyImg from '../../assets/images/teams/unhappily.jpg'
 
 export default {
     state: {
@@ -23,7 +24,8 @@ export default {
             { src: SecretSubImg, alt: '' },
             { src: PitImg, alt: '' },
             { src: TimeMachine, alt: '' },
-            { src: PiratesImg, alt: '' }
+            { src: PiratesImg, alt: '' },
+            { src: unhappilyImg, alt: '' }
         ]
     }
 }
