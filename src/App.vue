@@ -42,6 +42,10 @@ export default {
         word-break: normal !important; 
     }
 
+    .v-navigation-drawer--close {
+        display: none;
+    }
+
     .purple-border {
         border: 8px solid purple !important;
     }
