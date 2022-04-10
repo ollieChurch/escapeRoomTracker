@@ -2,75 +2,20 @@
     <v-container class="pt-8">
         <h2 class="text-h2 pb-5">Maxwell Mysteries</h2>
         <p class="text-body-1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
-            diam, efficitur ac tellus id, cursus scelerisque massa. Mauris
-            pretium neque eu sodales dictum. Cras congue interdum eros, non
-            hendrerit leo luctus et. Duis viverra aliquet rhoncus. Curabitur id
-            lorem vel enim porta sodales. Donec id varius magna, quis dictum
-            ante.
+            During the lockdowns of 2020 and 2021, my partner and I put our time to use creating the first two puzzle games in the Maxwell Mysteries series. We are delighted that the games have received rave reviews from players and the experts over at Review The Room. Follow 1930s Private Investigator Larry Maxwell into the New York underworld. Find the clues, solve the puzzles and close the case!
         </p>
-        <v-container class="shop-container my-15 px-10 pb-10 rounded-xl">
-            <h3 class="text-h3 pb-4 pt-0 px-3 mt-n10 products-title">
-                Products
-            </h3>
-            <v-row>
-                <v-col cols="12" sm="6" lg="4" v-for="product in $store.state.products.full" :key="product.name + product.id">
-                    <v-hover>
-                        <template v-slot:default="{ hover }">
-                            <v-card
-                                elevation="7"
-                                class="rounded-xl py-2 purple-border product-card"
-                            >
-                                <v-card-title class="px-5">
-                                    {{ product.name }}
-                                    </v-card-title>
-                                <v-card-subtitle class="px-5">
-                                    {{ product.category }}
-                                    </v-card-subtitle>
-                                <v-img
-                                    :src="product.image.src"
-                                    :alt="product.image.alt"
-                                />
-
-                                <div>
-                                    <v-fade-transition>
-                                        <v-overlay
-                                            v-if="hover"
-                                            absolute
-                                            color="#036358"
-                                        >
-                                            <v-btn color="purple" link :to="`/maxwellmysteries/product/${product.id}`">
-                                                See more info
-                                                </v-btn>
-                                        </v-overlay>
-                                    </v-fade-transition>
-                                </div>
-
-                                <v-card-text class="px-5 text-body-1">
-                                   {{ product.text }}
-                                </v-card-text>
-                                <v-card-actions class="flex-column pt-0" v-if="product.review">
-                                    <v-rating
-                                        full-icon="mdi-star"
-                                        length="5"
-                                        readonly
-                                        :value="product.review.rating"
-                                        size="25"
-                                        color="orange"
-                                    />
-                                    <p class="text-subtitle">{{ product.review.reviewer }}</p>
-                                </v-card-actions>
-                            </v-card>
-                        </template>
-                    </v-hover>
-                </v-col>
-            </v-row>
-        </v-container>
+        <product-display />
     </v-container>
 </template>
 
 <script>
-    export default {}
+    import ProductDisplay from '../components/ProductDisplay.vue'
+
+    export default {
+        components: {
+            ProductDisplay
+        }
+    }
 </script>
 
 <style scoped>
