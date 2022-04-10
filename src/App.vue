@@ -10,9 +10,7 @@
 
 <script>
 import NavBar from './components/NavBar.vue'
-
 import tagIcons from './mixins/tagIcons'
-
 
 export default {
   name: 'App',
