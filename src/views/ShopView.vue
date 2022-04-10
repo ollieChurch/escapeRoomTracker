@@ -14,6 +14,10 @@
     export default {
         components: {
             ProductDisplay
+        },
+
+        mounted() {
+            window.scrollTo(0,0)
         }
     }
 </script>

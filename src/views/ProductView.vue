@@ -78,6 +78,7 @@
 
         mounted() {
             this.getProduct()
+            window.scrollTo(0,0)
         },
 
         data: function () {
@@ -93,6 +94,7 @@
                 this.product = this.$store.state.products.full.find(
                     product => product.id == this.productId
                 )
+                window.scrollTo(0, 0)
             },
 
             formatPrice: function (amount) {

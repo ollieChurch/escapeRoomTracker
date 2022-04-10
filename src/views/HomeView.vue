@@ -35,6 +35,10 @@
             TextDecrypt
         },
 
+        mounted() {
+            window.scrollTo(0,0)
+        },
+
         data: function () {
             return {
                 greeting: 'Hello...'
