@@ -1,11 +1,13 @@
 <template>
-  <v-app>
-    <nav-bar />
+    <v-app>
+        <nav-bar />
 
-    <v-main>
-      <router-view/>
-    </v-main>
-  </v-app>
+        <v-main>
+            <v-fade-transition>
+                <router-view />
+            </v-fade-transition>
+        </v-main>
+    </v-app>
 </template>
 
 <script>
@@ -15,20 +17,19 @@ import tagIcons from './mixins/tagIcons'
 export default {
   name: 'App',
 
-  components: {
-      NavBar
-  },
 
-  mixins: function() {
-      return [
-          tagIcons
-      ]
-  },
+        components: {
+            NavBar
+        },
 
-  data: () => ({
-    //
-  }),
-};
+        mixins: function () {
+            return [tagIcons]
+        },
+
+        data: () => ({
+            //
+        })
+    }
 </script>
 
 <style>
@@ -36,8 +37,9 @@ export default {
         box-sizing: border-box;
     }
 
-    .v-card__text, .v-card__title {
-        word-break: normal !important; 
+    .v-card__text,
+    .v-card__title {
+        word-break: normal !important;
     }
 
     .v-navigation-drawer--close {
