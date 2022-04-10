@@ -2,7 +2,7 @@
     <v-container>
         <v-container>
             <v-row class="row-container mt-6">
-                <v-col cols="8">
+                <v-col cols="12" sm="8">
                     <h2 class="text-h2">Completed Games</h2>
                 </v-col>
                 <v-spacer />
@@ -31,7 +31,8 @@
                 />
             </v-col>
 
-            <v-col cols="auto" lg="6" class="d-flex align-center justify-end">
+            <v-col cols="12" lg="6" class="d-none d-sm-flex align-center justify-end debug">
+                <v-spacer />
                 <p class="pb-0 mb-0 mr-5">Filter By:</p>
                 <v-btn-toggle icon rounded v-model="filterTag">
                     <v-tooltip top v-for="tag in getTags" :key="tag + 'btn'">
@@ -52,6 +53,7 @@
                         <span>top 10</span>
                     </v-tooltip>
                 </v-btn-toggle>
+                <v-spacer class="hidden-lg-and-up"/>
             </v-col>
         </v-row>
 
