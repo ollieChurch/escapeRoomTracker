@@ -39,10 +39,9 @@ const routes = [
 const router = new VueRouter({
     routes,
 
-    scrollBehavior() {
-        // always scroll to top
-        return { top: 0 }
-    }
+    scrollBehavior () {
+        return { x: 0, y: 0 }
+      }
 })
 
 export default router

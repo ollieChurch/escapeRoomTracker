@@ -78,7 +78,6 @@
 
         mounted() {
             this.getProduct()
-            window.scrollTo(0,0)
         },
 
         data: function () {

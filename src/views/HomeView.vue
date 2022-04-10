@@ -1,7 +1,6 @@
 <template>
     <div>
         <v-container>
-            <transition-group name="fade" appear>
                 <v-row class="pt-15 pb-10" key="home0">
                     <v-col cols="7">
                         <text-decrypt
@@ -18,7 +17,6 @@
                     :images="$store.state.images.images"
                     key="home1"
                 />
-            </transition-group>
         </v-container>
     </div>
 </template>
@@ -35,10 +33,6 @@
             TextDecrypt
         },
 
-        mounted() {
-            window.scrollTo(0,0)
-        },
-
         data: function () {
             return {
                 greeting: 'Hello...'
@@ -48,12 +42,5 @@
 </script>
 
 <style scoped>
-    .fade-enter-active,
-    .fade-leave-active {
-        transition: opacity 4s;
-    }
-    .fade-enter,
-    .fade-leave-to {
-        opacity: 0;
-    }
+    
 </style>

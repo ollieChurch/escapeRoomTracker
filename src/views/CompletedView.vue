@@ -85,7 +85,6 @@
 
         mounted() {
             this.filterList()
-            window.scrollTo(0,0)
         },
 
         data: function () {
