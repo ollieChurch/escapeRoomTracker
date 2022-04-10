@@ -31,7 +31,7 @@
                 />
             </v-col>
 
-            <v-col cols="12" lg="6" class="d-none d-sm-flex align-center justify-end debug">
+            <v-col cols="12" lg="6" class="d-none d-sm-flex align-center justify-end">
                 <v-spacer />
                 <p class="pb-0 mb-0 mr-5">Filter By:</p>
                 <v-btn-toggle icon rounded v-model="filterTag">
