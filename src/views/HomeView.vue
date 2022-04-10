@@ -5,9 +5,11 @@
                 <v-row class="pt-15 pb-10" key="home0">
                     <v-col cols="7">
                         <text-decrypt
-                            addedClasses="text-h1"
+                            addedClasses="text-h1 hidden-sm-and-down"
                             :inputText="greeting"
                         />
+
+                        <h2 class="text-h1 hidden-md-and-up">{{ greeting }}</h2>
                     </v-col>
                     <v-spacer />
                 </v-row>
