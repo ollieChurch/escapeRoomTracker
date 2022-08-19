@@ -156,7 +156,11 @@ export default {
                 venue: 'Pier Pressure',
                 city: 'Brighton',
                 country: 'UK',
-                gamesPlayed: [{ name: 'Modrophenia' }, { name: 'Raver Quest' }]
+                gamesPlayed: [
+                    { name: 'Modrophenia' }, 
+                    { name: 'Raver Quest' },
+                    { name: 'Pavilion Perplex' }
+                ]
             },
             {
                 venue: 'Bewilderbox',
@@ -385,7 +389,10 @@ export default {
                 venue: 'Suffolk Escape Room',
                 city: 'Saxmundham',
                 country: 'UK',
-                gamesPlayed: [{ name: 'Air Raid' }]
+                gamesPlayed: [
+                    { name: 'Air Raid' },
+                    { name: "Superbugs" }
+                ]
             },
             {
                 venue: 'Escape Hunt',
