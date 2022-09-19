@@ -460,7 +460,7 @@ export default {
                 venue: 'Mythologic',
                 city: 'Gillingham',
                 country: 'UK',
-                gamesPlayer: [{ name: 'The Greatest Bank Heist' }]
+                gamesPlayed: [{ name: 'The Greatest Bank Heist' }]
             }
         ],
 
