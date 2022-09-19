@@ -455,6 +455,12 @@ export default {
                 city: 'Clacton-On-Sea',
                 country: 'UK',
                 gamesPlayed: [{ name: 'A Race Against Time' }]
+            },
+            {
+                venue: 'Mythologic',
+                city: 'Gillingham',
+                country: 'UK',
+                gamesPlayer: [{ name: 'The Greatest Bank Heist' }]
             }
         ],
 
