@@ -24,17 +24,11 @@ export default {
                 gamesPlayed: [
                     {
                         name: 'The Case Of The Missing Gun',
-                        topTen: 4,
-                        description:
-                            'My third escape room, great set and story driven. Puzzle structure played to my strengths and loved the secret surprises. Mad and energetic excitement and fun throughout with excellent hosting.'
-                    },
-                    {
-                        name: 'Venus',
                         topTen: 9,
-                        tags: ['testing', 'unique'],
                         description:
-                            'Even as the first team to test this room the potential behind it was huge. Puzzles which go deeper and require more careful thought than most. But the standout is Venus herself, a fully interactive and hilarious A.I. I could have spent the whole time just chatting to her.'
+                            'My third escape room, great set and story driven. Strong logical puzzle set, all on theme, and a unique clue system which didnt appear out of place in 1930s New York. Mad and energetic excitement and fun throughout with excellent hosting.'
                     },
+                    { name: 'Venus', tags: ['testing', 'unique'], }, 
                     { name: 'The Recording Studio', tags: ['testing'] }
                 ]
             },
@@ -72,7 +66,6 @@ export default {
                     { name: 'Blown Away' },
                     {
                         name: 'The Bank Robbery (new)',
-                        topTen: 10,
                         tags: ['testing'],
                         description:
                             'Bursting out of the back of a van into a convincingly modern day bank, cracking a giant classic looking vault door as well as ripping an ATM open by chaining it to the van. This room was a lot of fun in so many places.'
@@ -96,7 +89,7 @@ export default {
                 gamesPlayed: [
                     {
                         name: 'Rebellion',
-                        topTen: 8,
+                        topTen: 10,
                         description:
                             'Creating a castle inside some fairly standard modern day rooms is no easy task. I loved all of the physical analogue mechanics that made this room work and the non-linear puzzles which ended up linking together in an extremely satisfying ending.'
                     },
@@ -193,7 +186,7 @@ export default {
                 gamesPlayed: [
                     {
                         name: 'Special Ops: Mysterious Market',
-                        topTen: 3,
+                        topTen: 4,
                         tags: ['immersive'],
                         description:
                             'This was a beautifully decorated room with high tech puzzles, immersive atmosphere, and several twist endings. We had a couple of tech malfunctions but still hugely impressive and co-operative puzzling. This really demonstrated what a big budget has the potential to create.'
@@ -461,6 +454,31 @@ export default {
                 city: 'Gillingham',
                 country: 'UK',
                 gamesPlayed: [{ name: 'The Greatest Bank Heist' }]
+            },
+            {
+                venue: 'The Room',
+                city: 'Berlin',
+                country: 'Germany',
+                gamesPlayed: [
+                    {
+                        name: 'The Lost Treasure',
+                        topTen: 3,
+                        tags: ['immersive', 'unique'],
+                        description: 'Incredible attention to detail in an immersive set with technically impressive features. A Fun set of puzzles, story and special effects. Unlocking the secrets and driving Excalibur through the Holy Grail can only be described as an epic adventure.'
+                    },
+                    {
+                        name: 'Brandon Darkmoor',
+                        topTen: 8,
+                        tags: ['immersive', 'unique', 'horror'],
+                        description: 'Freaky ghostbuster horror turned comedy twilight-zone, dimension-hopping disco lift extravaganza. The drop in logical puzzle solving was won over by the brilliant storytelling through set and technical wizzardry. Top marks for experience.'
+                    }
+                ]
+            },
+            {
+                venue: 'Secret Studio',
+                city: 'London',
+                country: 'UK',
+                gamesPlayed: [{ name: 'Secret Studio' }]
             }
         ],
 
