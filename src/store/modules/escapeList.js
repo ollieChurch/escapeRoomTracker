@@ -14,7 +14,8 @@ export default {
                 gamesPlayed: [
                     { name: 'The Treasure Of Greenbeard', fail: true },
                     { name: 'The Haunted', fail: true, tags: ['horror'] },
-                    { name: 'Mafia Robbery' }
+                    { name: 'Mafia Robbery' },
+                    { name: 'The Tomb Of Akhenaten' }
                 ]
             },
             {
