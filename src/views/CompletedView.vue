@@ -52,6 +52,14 @@
                         </template>
                         <span>top 10</span>
                     </v-tooltip>
+                    <v-tooltip top>
+                        <template v-slot:activator="{ on, attrs }">
+                            <v-btn value="fail" v-bind="attrs" v-on="on">
+                                <v-icon>mdi-emoticon-dead</v-icon>
+                            </v-btn>
+                        </template>
+                        <span>fail</span>
+                    </v-tooltip>
                 </v-btn-toggle>
                 <v-spacer class="hidden-lg-and-up"/>
             </v-col>

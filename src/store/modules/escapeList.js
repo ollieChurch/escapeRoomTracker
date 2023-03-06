@@ -577,6 +577,10 @@ export default {
                             if (game.topTen) {
                                 return (bool = true)
                             }
+                        } else if (tag === 'fail') {
+                            if (game.fail) {
+                                return (bool = true)
+                            }
                         } else {
                             if (game.tags && game.tags.includes(tag)) {
                                 return (bool = true)
