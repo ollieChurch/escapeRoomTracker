@@ -97,7 +97,8 @@ export default {
                     { name: 'Imaginarium' },
                     { name: 'The Divide', tags: ['pop-up'] },
                     { name: 'Station X', tags: ['versus'] },
-                    { name: 'Pudding Lane', tags: ['immersive'] }
+                    { name: 'Pudding Lane', tags: ['immersive'] },
+                    { name: 'Curioser and Curioser' }
                 ]
             },
             {
@@ -480,6 +481,12 @@ export default {
                 city: 'London',
                 country: 'UK',
                 gamesPlayed: [{ name: 'Secret Studio' }]
+            },
+            {
+                venue: 'Escape Barcelona',
+                city: 'Barcelona',
+                country: 'UK',
+                gamesPlayed: [{ name: 'Jurassic Land' }]
             }
         ],
 
