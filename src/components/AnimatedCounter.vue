@@ -29,7 +29,7 @@
 
         methods: {
             animateCounter: function () {
-                setTimeout(() => this.counter++, 50)
+                setTimeout(() => this.counter++, 30)
             }
         },
 
