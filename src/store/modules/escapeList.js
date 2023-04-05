@@ -25,7 +25,7 @@ export default {
                 gamesPlayed: [
                     {
                         name: 'The Case Of The Missing Gun',
-                        topTen: 9,
+                        topTen: 10,
                         description:
                             'My third escape room, great set and story driven. Strong logical puzzle set, all on theme, and a unique clue system which didnt appear out of place in 1930s New York. Mad and energetic excitement and fun throughout with excellent hosting.'
                     },
@@ -88,12 +88,7 @@ export default {
                 city: 'Reading',
                 country: 'UK',
                 gamesPlayed: [
-                    {
-                        name: 'Rebellion',
-                        topTen: 10,
-                        description:
-                            'Creating a castle inside some fairly standard modern day rooms is no easy task. I loved all of the physical analogue mechanics that made this room work and the non-linear puzzles which ended up linking together in an extremely satisfying ending.'
-                    },
+                    { name: 'Rebellion' },
                     { name: 'Imaginarium' },
                     { name: 'The Divide', tags: ['pop-up'] },
                     { name: 'Station X', tags: ['versus'] },
@@ -377,7 +372,13 @@ export default {
                 city: 'Crawley',
                 country: 'UK',
                 gamesPlayed: [
-                    { name: 'Questionable Ethics', tags: ['immersive'] }
+                    { name: 'Questionable Ethics', tags: ['immersive'] },
+                    {
+                        name: "The Explorer's Diary",
+                        tags: ['immersive'],
+                        topTen: 9,
+                        description: "Meticuously maintained, frivolous fun, on point theming and varied puzzles with a non-linear structure allowing for plenty to do in a team of 4. Atmosphere is something Hounds do incredibly well and not a drop of skill is lost in the set up of this game. Couple that with friendly and expert hosting."
+                    }
                 ]
             },
             {
