@@ -486,8 +486,17 @@ export default {
             {
                 venue: 'Escape Barcelona',
                 city: 'Barcelona',
-                country: 'UK',
+                country: 'Spain',
                 gamesPlayed: [{ name: 'Jurassic Land' }]
+            },
+            {
+                venue: 'Blackout Escape Rooms',
+                city: 'Milton Keynes',
+                country: 'UK',
+                gamesPlayed: [
+                    { name: 'Candy Shop' },
+                    { name: 'Hostage' }
+                ]
             }
         ],
 
