@@ -499,12 +499,12 @@ export default {
                 ]
 			},
 			{
-				venues: 'Paradox Parlours',
+				venue: 'Paradox Parlours',
 				city: 'Woking',
 				country: 'UK',
 				gamesPlayed: [
 					{ name: 'The Rig' },
-					{ name: "Wizard's Enigma", tags: ['immersive']}
+					{ name: "Wizard's Enigma" }
 				]
 			}
         ],
