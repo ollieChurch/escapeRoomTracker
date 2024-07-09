@@ -70,7 +70,11 @@ export default {
                         tags: ['testing'],
                         description:
                             'Bursting out of the back of a van into a convincingly modern day bank, cracking a giant classic looking vault door as well as ripping an ATM open by chaining it to the van. This room was a lot of fun in so many places.'
-                    }
+					},
+					{
+						name: 'Age Of Magic',
+						tags: ['immersive']
+					}
                 ]
             },
             {
