@@ -140,7 +140,8 @@ export default {
                 country: 'UK',
                 gamesPlayed: [
                     { name: 'Operation Blacksheep' },
-                    { name: 'Revenge Of The Sheep' }
+					{ name: 'Revenge Of The Sheep' },
+					{ name: 'CQ:Origenes' }
                 ]
             },
             {
