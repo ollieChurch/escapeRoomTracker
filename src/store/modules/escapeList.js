@@ -141,7 +141,7 @@ export default {
                 gamesPlayed: [
                     { name: 'Operation Blacksheep' },
 					{ name: 'Revenge Of The Sheep' },
-					{ name: 'CQ:Origenes' }
+					{ name: 'CQ:Origenes', tags: ['immersive'] }
                 ]
             },
             {
@@ -507,6 +507,14 @@ export default {
 				gamesPlayed: [
 					{ name: 'The Rig' },
 					{ name: "Wizard's Enigma" }
+				]
+			},
+			{
+				venue: 'Escape The Past',
+				city: 'Edinburgh',
+				country: 'UK',
+				gamesPlayed: [
+					{ name: 'The Anatomist' }
 				]
 			}
         ],
