@@ -389,7 +389,8 @@ export default {
                 country: 'UK',
                 gamesPlayed: [
                     { name: 'Air Raid' },
-                    { name: "Superbugs" }
+					{ name: "Superbugs" },
+					{ name: "The Hideout" }
                 ]
             },
             {
